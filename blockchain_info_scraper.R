@@ -5,6 +5,18 @@ library(pbapply)
 #### set path
 setwd("/your/path/here")
 
+#### set your repo
+R_repo <- "http://your/R/repo/"
+
+libs <- list("RJSONIO", "data.table", "pbapply")
+
+invisible(lapply(libs, function(x){
+        result <- library(x, logical.return=T, character.only =T)
+        if(result == F) install.packages(x, repos=R_repo)
+        library(x, character.only =T)
+}))
+
+
 bci_url1 <- "https://blockchain.info/block-height/"
 bci_url2 <- "?format=json"
 
@@ -38,3 +50,4 @@ blocks_requested <- 409320:409330
 blockchain_dt <- rbindlist(pbsapply(blocks_requested, flatten_list_func, simplify=F))
 
 write.csv(blockchain_dt, "blockchain_info.csv")
+
