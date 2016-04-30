@@ -1,8 +1,6 @@
 ---
-title: "readme.md"
 author: "organofcorti"
 date: "30 April 2016"
-output: html_document
 ---
 
 This R script scrapes and flattens blockchain variable data from blockchain.info into a data.table. Use Sys.sleep() command if you need to slow down your request due to the request limiter, currently set to:
