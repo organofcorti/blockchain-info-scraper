@@ -2,6 +2,9 @@ library(RJSONIO)
 library(data.table)
 library(pbapply)
 
+#### set path
+setwd("/your/path/here")
+
 bci_url1 <- "https://blockchain.info/block-height/"
 bci_url2 <- "?format=json"
 
@@ -34,3 +37,4 @@ blocks_requested <- 409320:409330
 
 blockchain_dt <- rbindlist(pbsapply(blocks_requested, flatten_list_func, simplify=F))
 
+write.csv(blockchain_dt, "blockchain_info.csv")
