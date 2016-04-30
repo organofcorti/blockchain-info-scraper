@@ -43,7 +43,7 @@ flatten_list_func <- function(x){
         
 }
 
-blocks_requested <- 409320:409330
+blocks_requested <- 409320:409331
 
 blockchain_dt <- rbindlist(pbsapply(blocks_requested, flatten_list_func, simplify=F))
 
