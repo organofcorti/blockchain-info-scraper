@@ -1,11 +1,9 @@
-library(RJSONIO)
-library(data.table)
-library(pbapply)
 
 #### set path
 setwd("/your/path/here")
 
 #### set your repo
+#R_repo <- "http://cran.csiro.au/"
 R_repo <- "http://your/R/repo/"
 
 libs <- list("RJSONIO", "data.table", "pbapply")
