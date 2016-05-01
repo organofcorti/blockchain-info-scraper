@@ -6,7 +6,7 @@ setwd("/your/path/here")
 #R_repo <- "http://cran.csiro.au/"
 R_repo <- "http://your/R/repo/"
 
-libs <- list("RJSONIO", "data.table", "pbapply")
+libs <- list("RJSONIO", "data.table", "pbapply", "plyr")
 
 invisible(lapply(libs, function(x){
         result <- library(x, logical.return=T, character.only =T)
@@ -43,7 +43,7 @@ flatten_list_func <- function(x){
         
 }
 
-blocks_requested <- 409320:409331
+blocks_requested <- 409321:409331
 
 blockchain_dt <- rbindlist(pbsapply(blocks_requested, flatten_list_func, simplify=F))
 
