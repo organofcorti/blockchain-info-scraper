@@ -21,7 +21,7 @@ bci_url2 <- "?format=json"
 
 ### example of an orphan at 409327
 ### we need to flatten the lists in order
-### to just have the data yo want - coinbase tx, 
+### to just have the data you want - coinbase tx, 
 ### generation address, timestamp, etc
 
 flatten_list_func <- function(x){
@@ -36,8 +36,9 @@ flatten_list_func <- function(x){
                
         # ignore orphans, keep data you want
         data_table_1 <- data_table_0[main_chain==TRUE, list(time, height, hash, ver, fee,  n_tx, 
-        size , coinbase = tx.inputs.script, tx.hash,  tx.out.addr, tx.out.addr_tag)]
+        size , script_hex = tx.inputs.script, tx.hash,  tx.out.addr, tx.out.addr_tag)]
 
+        #### script_hex can be converted to ASCII for coinbase signature
         
         return(data_table_1)
         
