@@ -40,6 +40,11 @@ flatten_list_func <- function(x){
 
         #### script_hex can be converted to ASCII for coinbase signature
         
+        #### Sys.sleep() command if you need to slow down your requests 
+        #### due to the request limiter
+        
+        # Sys.sleep(5)
+        
         return(data_table_1)
         
 }
