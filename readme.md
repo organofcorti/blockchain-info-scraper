@@ -17,7 +17,7 @@ R_repo <- "http://your/R/repo/"
 ```
   
 ##### The output table will contain fields for the following variables:
-"time", "height", "hash", "ver", "fee", "n_tx", "size","script_hex", "tx.hash", "tx.out.addr", "tx.out.addr_tag"
+"time", "height", "hash", "ver", "fee", "n_tx", "size","script_hex", "tx.hash", "tx.out.addr", "tx.out.addr_tag"  
 Mining pools and other block makers can be identified using the generation address ("tx.out.addr") or converting "script_hex" to a coinbase signature. "tx.out.addr_tag" is blockchain.info's guess at the block maker based on a list of known generation addresses.  
 
 An example of the output is here: [blockchain_info.csv](https://github.com/organofcorti/blockchain-info-scraper/blob/master/blockchain_info.csv)
