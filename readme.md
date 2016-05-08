@@ -3,6 +3,8 @@ author: "organofcorti"
 date: "30 April 2016"
 ---
 
+### No longer updated, now bundled into [bitcoin-blockchain-data](https://github.com/organofcorti/bitcoin-blockchain-data)
+
 This [R](http://r-project.org) script scrapes and flattens blockchain variable data from blockchain.info into a data.table. 
 
 
